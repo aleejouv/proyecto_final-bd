@@ -17,22 +17,21 @@ Una app tipo Kanban pensada para developers que trabajan solos en sus proyectos 
 
 ## Base de datos
 
-PostgreSQL. Para inicializar:
+PostgreSQL + pgAdmin. Para inicializar:
 
-```bash
-psql -U tu_usuario -d prosperapp -f db/schema.sql
-psql -U tu_usuario -d prosperapp -f db/seed.sql
-```
+1. Levantar los contenedores: `docker-compose up -d`
+2. Entrar a pgAdmin en `http://localhost:5050`
+3. Ejecutar `db/schema.sql` y luego `db/seed.sql` desde el Query Tool
 
 ## Entidades principales
 
 `USUARIO` → `PROYECTO` → `SECCION` → `FUNCIONALIDAD` → subtareas, notas, código, decisiones técnicas
 
-## Stack
 
-- **Backend:** Node.js + Express
-- **BD:** PostgreSQL
-- **Frontend:** React + Tailwind
+## Entidades principales
+
+`USUARIO` → `PROYECTO` → `SECCION` → `FUNCIONALIDAD` → subtareas, notas, código, decisiones técnicas
+
 
 ## Equipo
 
